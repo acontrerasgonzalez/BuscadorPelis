@@ -19,7 +19,7 @@ function getFilms() {
   if(blockScroll==false){
     blockScroll=true;
     $.ajax({
-    url: "http://www.omdbapi.com/?s="+$("#busc").val()+"&page="+pagina+"&apikey=f20af2c3",
+    url: "https://www.omdbapi.com/?s="+$("#busc").val()+"&page="+pagina+"&apikey=f20af2c3",
     success: function(respuesta) {
 
       var listaFilms = $("#posts");
@@ -57,7 +57,7 @@ function getFilms() {
 
 function getFilm(event) {
   $.ajax({
-    url: "http://www.omdbapi.com/?i="+event.target.id+"&apikey=f20af2c3",
+    url: "https://www.omdbapi.com/?i="+event.target.id+"&apikey=f20af2c3",
     success: function(respuesta) {
       $("#popupBody>img").remove();
       $("#popupBody>p").remove();
